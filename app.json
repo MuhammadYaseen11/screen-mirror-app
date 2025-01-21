@@ -15,13 +15,18 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocalNetworkUsageDescription": "This app needs access to network to discover Cast-enabled devices"
+        "NSLocalNetworkUsageDescription": "This app needs access to network to discover Cast-enabled devices",
+        "NSBonjourServices": ["_http._tcp"]
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "permissions": ["ACCESS_WIFI_STATE", "INTERNET"],
+      "config": {
+        "usesCleartextTraffic": true
       }
     },
     "web": {
